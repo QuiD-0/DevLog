@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+<?php session_start();?>
+
+<head>
     <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    hello
-  </body>
+    <style>
+        @font-face {
+            font-family: 'RIDIBatang';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+    </style>
+    <script src="https://kit.fontawesome.com/b1e30c76c7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <title>quidlog/Dashboard</title>
+</head>
+
+<body>
+    <?php include('./php/manage.php');?>
+    <header>
+        <ul>
+            <li class="logo"><a href="https://quidlog.dev" class="toMain">QuidLog.dev</a></li>
+            <li><a href="managepage.php">Home</a></li>
+            <li><a href="managepage.php?id=1">Write</a></li>
+            <li><a href="managepage.php?id=2">Update</a></li>
+            <li><a href="managepage.php?id=3">Delete</a></li>
+            <div class="user">
+                <?php include("./php/topSession.php");?></div>
+        </ul>
+    </header>
+    <div class="main">아녕</div>
+</body>
+
 </html>

@@ -1,0 +1,67 @@
+:root {
+    --bgcolor: #f3f3f3;
+    --color1: #f3c4ca;
+    --color2: #85a0cf;
+    --color3: #aedcec;
+    --color4: #ed95ae;
+    --color5: #f6dfd9;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Maven Pro', sans-serif;
+}
+html{background-color: var(--bgcolor);}
+a{
+    text-decoration: none;
+    color: white;
+}
+a.toMain{
+    font-size: 30px;
+    font-weight: 600;
+}
+a.logout{
+    float: right;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 270px;
+  background: linear-gradient(to right, #f3c4ca, #e3b4ba);
+  height: 100%; /* Full height */
+  position: fixed; /* Make it stick, even on scroll */
+  overflow: auto; /* Enable scrolling if the sidenav has too much content */
+  box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.2);
+  float: left;
+}
+div.user{
+    float: left;
+    width: 230px;
+    height: 20px;
+    margin: 0px 20px;
+    color: white;
+    position: fixed;
+    top:95%;
+
+    
+}
+li{
+    height: 20px;
+    margin: 0px auto;
+    font-size: 20px;
+    padding: 20px;
+}
+li.logo{
+    box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.2);
+    height: 45px;
+}
+li>a{
+    color: white;
+}
+div.main{
+    width: 85%;
+    height: auto;
+    float: right;
+}
