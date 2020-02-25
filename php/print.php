@@ -20,9 +20,7 @@ function print_page()
     $sql = "SELECT * FROM article where article_id={$a_id} order by article_id desc";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($result);
-    if ($_GET['id']>$result->field_count) {
-        echo "아직 작성되지 않은 글입니다.";
-    } elseif (!isset($row)) {
+    if (!isset($row)) {
         echo "삭제되어 볼수없습니다.";
     } else {
         echo "<article class=\"focus\">

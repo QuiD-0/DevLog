@@ -14,12 +14,12 @@
 
     </style>
     <script src="https://kit.fontawesome.com/b1e30c76c7.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
     <link rel="stylesheet" href="/css/dashboard.css">
     <title>quidlog/Dashboard</title>
 </head>
 
 <body>
-    <?php include('./php/manage.php');?>
     <header>
         <ul>
             <li class="logo"><a href="https://quidlog.dev" class="toMain">QuidLog.dev</a></li>
@@ -31,7 +31,15 @@
                 <?php include("./php/topSession.php");?></div>
         </ul>
     </header>
-    <div class="main">아녕</div>
+    <div class="main">
+        <div class="search">
+            <form method="GET">
+                <input type="search" class="searchbox" placeholder="Search" name="search">
+                <button type="submit" class="searchbtn"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <?php include('./php/manage.php');?>
+    </div>
 </body>
 
 </html>
