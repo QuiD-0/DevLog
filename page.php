@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <!-- 이 프로젝트는 PHP + MySQL을 활용하여 웹페이지를 동적으로 생성하는 게시판형식의 블로그 입니다.-->
 
 <head>
     <meta charset="utf8mb4">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevLog.QuiD</title>
+       <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
     <style>
         @font-face {
             font-family: 'RIDIBatang';
