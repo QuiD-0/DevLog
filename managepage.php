@@ -3,7 +3,7 @@
 <?php session_start();?>
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf8mb4">
     <style>
         @font-face {
             font-family: 'RIDIBatang';

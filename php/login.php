@@ -10,8 +10,9 @@ $array = mysqli_fetch_array($result);
 $hash_password  = $array['userpw'];
 if (password_verify($pw, $hash_password)) {
     $_SESSION['user_id']=$id;
-    if(isset($_SESSION['user_id'])){
-    header('location:../managepage.php');
-}} else {
+    if (isset($_SESSION['user_id'])) {
+        header('location:../managepage.php');
+    }
+} else {
     header('location:../admin.html');
 }

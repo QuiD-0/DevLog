@@ -148,3 +148,8 @@ div.title {
     opacity: 1;
     filter: "alpha(opacity=100)";
 }
+
+div.deletebtn{
+  text-align: center;;
+  margin: 20px auto;
+}

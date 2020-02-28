@@ -17,7 +17,7 @@ function print_page()
 {
     include('connect.php');
     $a_id=$_GET['id'];
-    $sql = "SELECT * FROM article where article_id={$a_id} order by article_id desc";
+    $sql = "SELECT * FROM article where article_id={$a_id}";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($result);
     if (!isset($row)) {

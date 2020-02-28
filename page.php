@@ -3,7 +3,7 @@
 <!-- 이 프로젝트는 PHP + MySQL을 활용하여 웹페이지를 동적으로 생성하는 게시판형식의 블로그 입니다.-->
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf8mb4">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevLog.QuiD</title>
     <style>
