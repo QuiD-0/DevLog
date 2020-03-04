@@ -4,10 +4,6 @@
 
 <head>
     <meta charset="utf8mb4">
-       <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
     <style>
         @font-face {
             font-family: 'RIDIBatang';
@@ -24,7 +20,6 @@
 </head>
 
 <body>
-    <header>
         <ul>
             <li class="logo"><a href="https://quidlog.dev" class="toMain">QuidLog.dev</a></li>
             <li><a href="managepage.php">Home</a></li>
@@ -34,7 +29,6 @@
             <div class="user">
                 <?php include("./php/topSession.php");?></div>
         </ul>
-    </header>
     <div class="main">
         <div class="search">
             <form method="GET">

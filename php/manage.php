@@ -52,7 +52,7 @@ if (!isset($_GET['id'])) {
     }
 //홈
  if ($_GET['id']=="home"&&!isset($_GET['search'])) {
-     echo file_get_contents('./php/managehome.php');
+     include('./php/managehome.php');
  }
 //글쓰기
 if ($_GET['id']==1) {

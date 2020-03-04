@@ -11,7 +11,7 @@ function print_all()
         <div class=\"timestamp\">{$row['time']} by QuiD.</div>
         </article>";
         echo "<div class=\"line\"></div>";
-    };
+    }
 }
 function print_page()
 {
@@ -37,5 +37,21 @@ function print_title()
     $result = mysqli_query($conn, $sql);
     while ($row = mysqli_fetch_array($result)) {
         echo "<div class=\"title\"><a class=\"title\"href=\"#{$row['article_id']}\">{$row['title']}</a></div>";
-    };
+    }
+}
+function numarticle()
+{
+    include('connect.php');
+    $sql = "SELECT COUNT(*) FROM article";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_array($result);
+    echo $row[0];
+}
+function datearticle()
+{
+    include('connect.php');
+    $sql = "SELECT * FROM article ORDER BY article_id desc";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_array($result);
+    echo $row[2];
 }
