@@ -1,3 +1,4 @@
+//ToTop버튼 - 클릭시 최상단으로 이동
 $(document).ready(function () {
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
