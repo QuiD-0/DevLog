@@ -1,6 +1,6 @@
 <?php
 
-function print_all()
+function delete_print_all()
 {
     include('connect.php');
     $id=$_GET['page'];
@@ -10,7 +10,8 @@ function print_all()
     if (!isset($row)) {
         echo "삭제되어 볼수없습니다.";
     } else {
-        echo "<article class=\"focus\">
+        echo "
+        <article class=\"focus\">
     <div class=\"topic\">{$row['title']}</div>
     <div class=\"description\">{$row['description']}</div>
     <div class=\"timestamp\">{$row['time']} by QuiD.</div>

@@ -11,7 +11,7 @@
 <form class="delete" action="/php/deleteprocess.php" method="post">
   <input type="hidden" name="id" value="<?=$_GET['page'];?>">
 <p>
-  <?=print_all();?>
+  <?=delete_print_all();?>
 </p>
 <div class="deletebtn">
 <input type="text" name="Dkey" placeholder="삭제 입력">

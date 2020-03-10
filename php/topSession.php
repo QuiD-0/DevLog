@@ -1,6 +1,6 @@
 <?php
             if (!isset($_SESSION['user_id'])) {
-                header('location: admin.html');
+                header('location: /view/admin.html');
             } else {
                 $user_id = $_SESSION['user_id'];
                 $user_name = "QuiD";

@@ -27,7 +27,7 @@
             <li><a href="managepage.php?id=2">Update</a></li>
             <li><a href="managepage.php?id=3">Delete</a></li>
             <div class="user">
-                <?php include("./php/topSession.php");?></div>
+                <?php include("../php/topSession.php");?></div>
         </ul>
     <div class="main">
         <div class="search">
@@ -36,7 +36,7 @@
                 <button type="submit" class="searchbtn"><i class="fas fa-search"></i></button>
             </form>
         </div>
-        <?php include('./php/manage.php');?>
+        <?php include('../php/manage.php');?>
     </div>
 </body>
 

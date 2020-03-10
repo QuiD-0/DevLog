@@ -5,8 +5,11 @@ function print_all()
     $sql = "SELECT * FROM article order by article_id desc";
     $result = mysqli_query($conn, $sql);
     while ($row = mysqli_fetch_array($result)) {
-        echo "<article id=\"{$row['article_id']}\"><div class=\"topic\">
-        <a class=\"title\"href=\"page.php?id={$row['article_id']}\">{$row['title']}</a></div>
+        echo "
+        <article id=\"{$row['article_id']}\">
+        <div class=\"topic\">
+        <a class=\"title\"href=\"view/page.php?id={$row['article_id']}\">{$row['title']}
+        </a></div>
         <div class=\"description\">{$row['description']}</div>
         <div class=\"timestamp\">{$row['time']} by QuiD.</div>
         </article>";
@@ -23,7 +26,8 @@ function print_page()
     if (!isset($row)) {
         echo "삭제되어 볼수없습니다.";
     } else {
-        echo "<article class=\"focus\">
+        echo "
+      <article class=\"focus\">
       <div class=\"topic\">{$row['title']}</div>
       <div class=\"description\">{$row['description']}</div>
       <div class=\"timestamp\">{$row['time']} by QuiD.</div>
@@ -36,7 +40,10 @@ function print_title()
     $sql = "SELECT * FROM article order by article_id desc";
     $result = mysqli_query($conn, $sql);
     while ($row = mysqli_fetch_array($result)) {
-        echo "<div class=\"title\"><a class=\"title\"href=\"#{$row['article_id']}\">{$row['title']}</a></div>";
+        echo "
+        <div class=\"title\">
+        <a class=\"title\"href=\"#{$row['article_id']}\">{$row['title']}</a>
+        </div>";
     }
 }
 function numarticle()

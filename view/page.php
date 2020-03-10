@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <?php include('./php/print.php'); ?>
+    <?php include('../php/print.php'); ?>
     <header>
         <div class="headerlayout">
             <div class="home"><a href="http://quidlog.dev" class="home"><i class="far fa-file-code"></i> QuiD/Log</a></div>

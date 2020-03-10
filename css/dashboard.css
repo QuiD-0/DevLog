@@ -143,11 +143,15 @@ div.topic{
     margin: 10px;
     font-size: 20px;
     border-bottom: 1px dashed var(--color1);
+    overflow: hidden;
+    height: 30px;
 }
 div.description{
     margin: 10px;
     font-size: 15px;
     height: 210px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 h2{
     margin: 50px 20px 0px 20px;

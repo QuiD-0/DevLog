@@ -115,6 +115,8 @@ div.titlelist {
 
 div.title {
     border-bottom: 0.5px solid var(--bgcolor);
+    overflow: hidden;
+    text-overflow: ellipsis
 }
 
 #scroll {

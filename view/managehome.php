@@ -1,5 +1,5 @@
 <h2>홈🏡</h2>
-<?php include('print.php') ?>
+<?php include('../php/print.php') ?>
 <div class="left">
   <div class="summary">
     <h3>QUID의 블로그일지</h4><br>
@@ -12,7 +12,7 @@
 </div>
 <div class="right">
       <?php
-          include('connect.php');
+          include('../php/connect.php');
           $sql = "SELECT * FROM article order by article_id desc";
           $result = mysqli_query($conn, $sql);
           while ($row = mysqli_fetch_array($result)) {

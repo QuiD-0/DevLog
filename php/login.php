@@ -11,8 +11,8 @@ $hash_password  = $array['userpw'];
 if (password_verify($pw, $hash_password)) {
     $_SESSION['user_id']=$id;
     if (isset($_SESSION['user_id'])) {
-        header('location:../managepage.php');
+        header('location:../view/managepage.php');
     }
 } else {
-    header('location:../admin.html');
+    header('location:../view/admin.html');
 }
