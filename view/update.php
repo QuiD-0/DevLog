@@ -9,9 +9,12 @@
   <body>
 <?php include('ud.php'); ?>
     <div class="center">
+      <!--수정할 글 수정 부분-->
       <form action="/php/updateprocess.php" method="post">
         <input type="hidden" name="id" value="<?=$_GET['page'];?>">
+        <!--수정하기전 글 제목-->
         <input type="text" class="title" name="title" value="<?=title()?>">
+        <!--CKEDITOR에 수정 하기전 본문 불러오기-->
         <textarea name="description"><?=description();?></textarea>
         <script>
           CKEDITOR.replace('description', {

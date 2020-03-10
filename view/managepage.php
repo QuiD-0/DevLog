@@ -27,6 +27,7 @@
             <li><a href="managepage.php?id=2">Update</a></li>
             <li><a href="managepage.php?id=3">Delete</a></li>
             <div class="user">
+                <!--로그인 정보 출력-->
                 <?php include("../php/topSession.php");?></div>
         </ul>
     <div class="main">
@@ -36,6 +37,7 @@
                 <button type="submit" class="searchbtn"><i class="fas fa-search"></i></button>
             </form>
         </div>
+        <!-- id값에 따른 글 출력-->
         <?php include('../php/manage.php');?>
     </div>
 </body>

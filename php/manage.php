@@ -1,4 +1,7 @@
 <?php
+//managepage의 중앙 부분 출력담당
+
+//id가 없을 경우 id=home으로 세팅
 if (!isset($_GET['id'])) {
     $_GET['id']="home";
 }
@@ -6,6 +9,7 @@ if (!isset($_GET['id'])) {
     include('connect.php');
     if (isset($_GET['search'])) {
         $key=$_GET['search'];
+        //입력받은 search값으로 DB에서 검색
         $sql = "SELECT * FROM article WHERE description OR title LIKE '%$key%'";
         $result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_array($result)) {
@@ -16,22 +20,28 @@ if (!isset($_GET['id'])) {
         };
     }
 
-//카드 클릭시
+//글 클릭시
     include('connect.php');
     if (isset($_GET['page'])) {
         $id=$_GET['page'];
         $sql = "SELECT * FROM article WHERE article_id={$id}";
         $result = mysqli_query($conn, $sql);
+        //모든 글 출력
         $row = mysqli_fetch_array($result);
         echo "<article class=\"focus\">
       <div class=\"topic\">{$row['title']}</div>
       <div class=\"description\">{$row['description']}</div>
       ";
+        //수정
         if ($_GET['id']==2) {
             echo "<a href=\"/php/update.php?page={$_GET['page']}\" class=\"update\">update</a></article>";
-        } elseif ($_GET['id']==3) {
+        }
+        //삭제 
+        elseif ($_GET['id']==3) {
             echo "<a href=\"/php/delete.php?page={$_GET['page']}\" class=\"delete\">delete</a></article>";
-        } elseif ($_GET['id']==5) {
+        } 
+        //검색을 통해 글을 클릭시 수정, 삭제 고르기
+        elseif ($_GET['id']==5) {
             echo "<a href=\"/php/update.php?page={$_GET['page']}\" class=\"update\">update</a><a href=\"/php/delete.php?page={$_GET['page']}\" class=\"delete\">delete</a></article>";
         }
     }
