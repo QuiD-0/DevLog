@@ -1,6 +1,5 @@
 <?php include('./view/head.php')?>
 <head>
-    <link rel="stylesheet" href="/css/dashboard.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/layout.css">
 </head>
