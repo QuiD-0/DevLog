@@ -4,8 +4,8 @@ function print_all()
 {
     include('connect.php');
     $sql = "SELECT * FROM article order by article_id desc";
-    $result = mysqli_query($conn, $sql);
-    while ($row = mysqli_fetch_array($result)) {
+    $result = pg_query($conn, $sql);
+    while ($row = pg_fetch_array($result)) {
         echo "
         <article id=\"{$row['article_id']}\">
         <div class=\"topic\">
@@ -23,8 +23,8 @@ function print_page()
     include('connect.php');
     $a_id=$_GET['id'];
     $sql = "SELECT * FROM article where article_id={$a_id}";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_array($result);
+    $result = pg_query($conn, $sql);
+    $row = pg_fetch_array($result);
     if (!isset($row)) {
         //url을 통해 이동했을 경우 중 글이 없는 경우(해당하는 id값의 글이 없을경우)
         echo "삭제되어 볼수없습니다.";
@@ -42,8 +42,8 @@ function print_title()
 {
     include('connect.php');
     $sql = "SELECT * FROM article order by article_id desc";
-    $result = mysqli_query($conn, $sql);
-    while ($row = mysqli_fetch_array($result)) {
+    $result = pg_query($conn, $sql);
+    while ($row = pg_fetch_array($result)) {
         echo "
         <div class=\"title\">
         <a class=\"title\"href=\"#{$row['article_id']}\">{$row['title']}</a>
@@ -55,8 +55,8 @@ function numarticle()
 {
     include('connect.php');
     $sql = "SELECT COUNT(*) FROM article";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_array($result);
+    $result = pg_query($conn, $sql);
+    $row = pg_fetch_array($result);
     echo $row[0];
 }
 //대시보드의 가장 최근에 작성된 글 날짜 표시
@@ -64,7 +64,7 @@ function datearticle()
 {
     include('connect.php');
     $sql = "SELECT * FROM article ORDER BY article_id desc";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_array($result);
+    $result = pg_query($conn, $sql);
+    $row =pg_fetch_array($result);
     echo $row[2];
 }
