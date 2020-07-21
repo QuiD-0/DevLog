@@ -34,15 +34,15 @@ if (!isset($_GET['id'])) {
       ";
         //수정
         if ($_GET['id']==2) {
-            echo "<a href=\"/php/update.php?page={$_GET['page']}\" class=\"update\">update</a></article>";
+            echo "<a href=\"/view/update.php?page={$_GET['page']}\" class=\"update\">update</a></article>";
         }
         //삭제 
         elseif ($_GET['id']==3) {
-            echo "<a href=\"/php/delete.php?page={$_GET['page']}\" class=\"delete\">delete</a></article>";
+            echo "<a href=\"/view/delete.php?page={$_GET['page']}\" class=\"delete\">delete</a></article>";
         } 
         //검색을 통해 글을 클릭시 수정, 삭제 고르기
         elseif ($_GET['id']==5) {
-            echo "<a href=\"/php/update.php?page={$_GET['page']}\" class=\"update\">update</a><a href=\"/php/delete.php?page={$_GET['page']}\" class=\"delete\">delete</a></article>";
+            echo "<a href=\"/view/update.php?page={$_GET['page']}\" class=\"update\">update</a><a href=\"/php/delete.php?page={$_GET['page']}\" class=\"delete\">delete</a></article>";
         }
     }
 // 수정 삭제
@@ -54,7 +54,7 @@ if (!isset($_GET['id'])) {
             $result = pg_query($conn, $sql);
             while ($row = pg_fetch_array($result)) {
                 echo "<article id=\"{$row['article_id']}\"><div class=\"topic\">
-        <a class=\"title\"href=.\"managepage.php?id={$_GET['id']}&page={$row['article_id']}\">{$row['title']}</a></div>
+        <a class=\"title\"href=managepage.php?id={$_GET['id']}&page={$row['article_id']}\">{$row['title']}</a></div>
         <div class=\"description\">{$row['description']}</div>
         </article>";
             };
