@@ -1,10 +1,8 @@
 <?php include('./view/head.php')?>
 <head>
-    <style>
-         <link rel="stylesheet" href="/css/dashboard.css">
-         <link rel="stylesheet" href="/css/style.css">
-           <link rel="stylesheet" href="/css/layout.css">
-        </style>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/layout.css">
 </head>
 <body>
     <?php include('../php/print.php'); ?>
