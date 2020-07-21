@@ -11,8 +11,8 @@ if (!isset($_GET['id'])) {
         $key=$_GET['search'];
         //입력받은 search값으로 DB에서 검색
         $sql = "SELECT * FROM article WHERE description OR title LIKE '%$key%'";
-        $result = mysqli_query($conn, $sql);
-        while ($row = mysqli_fetch_array($result)) {
+        $result = pg_query($conn, $sql);
+        while ($row = pg_fetch_array($result)) {
             echo "<article id=\"{$row['article_id']}\"><div class=\"topic\">
         <a class=\"title\"href=\"managepage.php?id=5&page={$row['article_id']}\">{$row['title']}</a></div>
         <div class=\"description\">{$row['description']}</div>
@@ -25,9 +25,9 @@ if (!isset($_GET['id'])) {
     if (isset($_GET['page'])) {
         $id=$_GET['page'];
         $sql = "SELECT * FROM article WHERE article_id={$id}";
-        $result = mysqli_query($conn, $sql);
+        $result = pg_query($conn, $sql);
         //모든 글 출력
-        $row = mysqli_fetch_array($result);
+        $row = pg_fetch_array($result);
         echo "<article class=\"focus\">
       <div class=\"topic\">{$row['title']}</div>
       <div class=\"description\">{$row['description']}</div>
@@ -51,8 +51,8 @@ if (!isset($_GET['id'])) {
         if ($_GET['id']==2||$_GET['id']==3) {
             echo "<h2>글을 선택 해주세요.😊</h2>";
             $sql = "SELECT * FROM article order by article_id desc";
-            $result = mysqli_query($conn, $sql);
-            while ($row = mysqli_fetch_array($result)) {
+            $result = pg_query($conn, $sql);
+            while ($row = pg_fetch_array($result)) {
                 echo "<article id=\"{$row['article_id']}\"><div class=\"topic\">
         <a class=\"title\"href=\"managepage.php?id={$_GET['id']}&page={$row['article_id']}\">{$row['title']}</a></div>
         <div class=\"description\">{$row['description']}</div>
