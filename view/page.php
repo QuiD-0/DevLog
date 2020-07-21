@@ -3,6 +3,10 @@
 <body>
     <?php include('../php/print.php'); ?>
     <header>
+       <style>
+         <link rel="stylesheet" href="../css/dashboard.css">
+         <link rel="stylesheet" href="../css/style.css">
+        </style>
         <div class="headerlayout">
             <div class="home"><a href="http://quidlog.dev" class="home"><i class="far fa-file-code"></i> QuiD/Log</a></div>
             <div class="github"><a href="https://github.com/QuiD-0"><i class="fab fa-github"></i></a></div>
