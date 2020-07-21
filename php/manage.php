@@ -54,7 +54,7 @@ if (!isset($_GET['id'])) {
             $result = pg_query($conn, $sql);
             while ($row = pg_fetch_array($result)) {
                 echo "<article id=\"{$row['article_id']}\"><div class=\"topic\">
-        <a class=\"title\"href=\managepage.php?id={$_GET['id']}&page={$row['article_id']}\">{$row['title']}</a></div>
+        <a class=\"title\"href=\view\managepage.php?id={$_GET['id']}&page={$row['article_id']}\">{$row['title']}</a></div>
         <div class=\"description\">{$row['description']}</div>
         </article>";
             };
