@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/dashboard.css">
   </head>
   <body>
-<?php include('ud.php'); ?>
+<?php include('../php/ud.php'); ?>
     <div class="center">
       <!--수정할 글 수정 부분-->
       <form action="/php/updateprocess.php" method="post">
