@@ -5,8 +5,8 @@ function delete_print_all()
     include('connect.php');
     $id=$_GET['page'];
     $sql = "SELECT * FROM article where article_id={$id}";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_array($result);
+    $result = pg_query($conn, $sql);
+    $row = pg_fetch_array($result);
         echo "
         <article class=\"focus\">
     <div class=\"topic\">{$row['title']}</div>
@@ -20,8 +20,8 @@ function title()
     include('connect.php');
     $id=$_GET['page'];
     $sql = "SELECT * FROM article where article_id={$id}";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_array($result);
+    $result = pg_query($conn, $sql);
+    $row = pg_fetch_array($result);
     echo "{$row['title']}";
 }
 //수정 페이지에서 기존의 본문 출력
@@ -30,7 +30,7 @@ function description()
     include('connect.php');
     $id=$_GET['page'];
     $sql = "SELECT * FROM article where article_id={$id}";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_array($result);
+    $result =pg_query($conn, $sql);
+    $row = pg_fetch_array($result);
     echo "{$row['description']}";
 }

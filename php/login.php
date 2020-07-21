@@ -6,8 +6,8 @@ $id = $_POST['id'];
 $pw = $_POST['pw'];
 //해시 알고리즘으로 비밀번호 해싱
 $hash_pw = password_hash($pw, PASSWORD_DEFAULT);
-$result = mysqli_query($conn, "SELECT * FROM  member WHERE userid = '$id'");
-$array = mysqli_fetch_array($result);
+$result = pg_query($conn, "SELECT * FROM  member WHERE userid = '$id'");
+$array = pg_fetch_array($result);
 //form 에서 입력받은 userpw를 해싱 
 $hash_password  = $array['userpw'];
 if (password_verify($pw, $hash_password)) {
