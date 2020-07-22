@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="/css/layout.css">
   </head>
   <body>
-    <?php include('/php/ud.php'); ?>
-<form class="delete" action="/php/deleteprocess.php" method="post">
+    <?php include('../php/ud.php'); ?>
+<form class="delete" action="../php/deleteprocess.php" method="post">
   <input type="hidden" name="id" value="<?=$_GET['page'];?>">
 <p>
   <!--삭제할 본문 출력-->

@@ -3,8 +3,8 @@ include('connect.php');
 $id=$_POST['id'];
 $Dkey=$_POST['Dkey'];
 $sql = "SELECT deletekey FROM security";
-$result = mysqli_query($conn, $sql);
-$row = mysqli_fetch_array($result);
+$result = pg_query($conn, $sql);
+$row = pg_fetch_array($result);
 //삭제 키 입력 확인
 if ($row[0]==$Dkey) {
     $sql = "DELETE from article where article_id={$id}";
