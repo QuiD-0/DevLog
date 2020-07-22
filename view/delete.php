@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/layout.css">
   </head>
   <body>
-    <?php include('ud.php'); ?>
+    <?php include('/php/ud.php'); ?>
 <form class="delete" action="/php/deleteprocess.php" method="post">
   <input type="hidden" name="id" value="<?=$_GET['page'];?>">
 <p>
