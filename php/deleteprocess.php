@@ -9,7 +9,7 @@ $row = pg_fetch_array($result);
 if ($row[0]==$Dkey) {
     $sql = "DELETE from article where article_id={$id}";
     pg_query($conn, $sql);
-    header('location: https://quidlog.dev/view/managepage.php');
+    header('location: https://quidlog.herokuapp.com/view/managepage.php');
 } else {
     echo "삭제 실패";
 }
