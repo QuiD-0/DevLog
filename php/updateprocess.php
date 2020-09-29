@@ -6,4 +6,4 @@ $title=$_POST['title'];
 $desc=$_POST['description'];
 $sql="UPDATE article SET title='{$title}', description='{$desc}' WHERE article_id='{$id}' ";
 pg_query($conn, $sql);
-header('location: https://quidlog.dev/view/managepage.php');
+header('location: https://quidlog.herokuapp.com/view/managepage.php');

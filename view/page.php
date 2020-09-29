@@ -8,7 +8,7 @@
     <header>
        
         <div class="headerlayout">
-            <div class="home"><a href="http://quidlog.dev" class="home"><i class="far fa-file-code"></i> QuiD/Log</a></div>
+            <div class="home"><a href="https://quidlog.herokuapp.com/" class="home"><i class="far fa-file-code"></i> QuiD/Log</a></div>
             <div class="github"><a href="https://github.com/QuiD-0"><i class="fab fa-github"></i></a></div>
         </div>
     </header>
